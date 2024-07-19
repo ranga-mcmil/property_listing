@@ -5,6 +5,7 @@
 */
 import { Button } from "@/components/ui/button"
 import { Navbar } from "./navbar"
+import { PropertyCard } from "./property-card"
 
 export function Homepage() {
   return (
@@ -17,37 +18,13 @@ export function Homepage() {
           <button className="bg-gray-300 text-gray-700 px-4 py-2 rounded w-full md:w-auto">To Rent</button>
         </div>
       </section>
-      
+
       <section className="container mx-auto py-12 px-4 md:px-6">
         <h2 className="text-2xl font-bold mb-6">Properties For Sale</h2>
         <div className="relative">
           <div className="flex overflow-x-auto snap-x snap-mandatory space-x-6 -mx-4 md:-mx-6 pb-4">
-            {[1, 3, 4].map((i) => (
-              <div key={i} className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 px-4 md:px-6">
-                <div className="bg-white rounded shadow p-4">
-                  <img src="/placeholder.svg" alt="Property" className="w-full h-48 object-cover rounded" />
-                  <div className="mt-4">
-                    <h3 className="text-lg font-semibold">Property Type</h3>
-                    <p className="text-gray-600">Luxury Family Home</p>
-                    <p className="text-gray-600">83 Hindhead Avenue, Chisipite, Harare</p>
-                    <p className="text-gray-600">Beds: 2 Baths: 1 2000 SQM</p>
-                    <div className="mt-4 border-t pt-4 flex items-center justify-between">
-                      <div className="flex gap-2">
-                        <Button variant="outline">
-                          <HeartIcon className="w-4 h-4" />
-                        </Button>
-                        <Button variant="outline">
-                          <ShareIcon className="w-4 h-4" />
-                        </Button>
-                        <Button variant="outline">
-                          <StarIcon className="w-4 h-4" />
-                        </Button>
-                      </div>
-                      <Button className="bg-red-500 text-white px-4 py-2 rounded">Details</Button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            {[1, 3, 4, 5, 6].map((i) => (
+              <PropertyCard />
             ))}
           </div>
           <div className="flex justify-center mt-4 space-x-2">
@@ -59,19 +36,17 @@ export function Homepage() {
       </section>
       <section className="bg-white container mx-auto py-12 px-4 md:px-6">
         <h2 className="text-2xl font-bold mb-6">Properties For Rent</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[1, 2, 3].map((i) => (
-            <div key={i} className="bg-white rounded shadow p-4">
-              <img src="/placeholder.svg" alt="Property" className="w-full h-48 object-cover rounded" />
-              <div className="mt-4">
-                <h3 className="text-lg font-semibold">Property Type</h3>
-                <p className="text-gray-600">Luxury Family Home</p>
-                <p className="text-gray-600">83 Hindhead Avenue, Chisipite, Harare</p>
-                <p className="text-gray-600">Beds: 2 Baths: 1 2000 SQM</p>
-                <button className="mt-4 bg-red-500 text-white px-4 py-2 rounded">Details</button>
-              </div>
-            </div>
-          ))}
+        <div className="relative">
+          <div className="flex overflow-x-auto snap-x snap-mandatory space-x-6 -mx-4 md:-mx-6 pb-4">
+            {[1, 3, 4, 5, 6].map((i) => (
+              <PropertyCard />
+            ))}
+          </div>
+          <div className="flex justify-center mt-4 space-x-2">
+            <div className="w-2 h-2 bg-gray-400 rounded-full" />
+            <div className="w-2 h-2 bg-gray-400 rounded-full" />
+            <div className="w-2 h-2 bg-red-500 rounded-full" />
+          </div>
         </div>
       </section>
       <section className="bg-gray-100 py-12 md:py-16 px-4 md:px-6">

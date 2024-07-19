@@ -1,5 +1,3 @@
-import { Homepage } from "@/components/homepage";
-
 export function Navbar() {
 
   return (
