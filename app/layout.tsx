@@ -1,13 +1,20 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+// This is the root layout component for your Next.js app.
+// Learn more: https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts#root-layout-required
+import { Inter } from 'next/font/google'
+import { cn } from '@/lib/utils'
+import './globals.css'
 
-const inter = Inter({ subsets: ["latin"] });
+const fontHeading = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-heading',
+})
 
-export const metadata: Metadata = {
-  title: "Frontend Test",
-  description: "Frontend Test",
-};
+const fontBody = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-body',
+})
 
 export default function RootLayout({
   children,
@@ -16,7 +23,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body 
+        className={cn(
+          'antialiased',
+          fontHeading.variable,
+          fontBody.variable
+        )}
+      >
+        {children}
+      </body>
     </html>
-  );
+  )
 }
