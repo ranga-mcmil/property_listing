@@ -7,7 +7,10 @@ export default async function Home() {
   const propertiesForSale = latestProperties.data.latestPropertiesForSale
 
   return (
-    <Homepage propertiesToRent={propertiesToRent} propertiesForSale={propertiesForSale} />
+    <Homepage 
+      propertiesToRent={propertiesToRent} 
+      propertiesForSale={propertiesForSale} 
+    />
   );
 }
 

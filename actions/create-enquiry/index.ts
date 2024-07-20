@@ -1,10 +1,8 @@
 "use server"
 
-import { EnquiryDataSchema, EnquiryDataType } from "./types";
+import { EnquiryDataSchema } from "./types";
 
 export async function createEnquiry(formData: FormData) {
-    // enquiryData.ownedBy = "your_email@example.com";
-
     const {firstName, lastName, email, dialingCode, phoneNumber, message, listingId, ownedBy} = EnquiryDataSchema.parse({
       firstName: formData.get('firstName'),
       lastName: formData.get('lastName'),
@@ -28,7 +26,6 @@ export async function createEnquiry(formData: FormData) {
       ownedBy
     }
 
-  
     const response = await fetch('https://fsboafrica.com/api/enquiries/create', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -38,6 +35,6 @@ export async function createEnquiry(formData: FormData) {
     if (!response.ok) {
         throw new Error('Failed to create enquiry')
     }
-     
+         
     return await response.json()
 }

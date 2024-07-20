@@ -1,9 +1,13 @@
+import Link from "next/link";
+
 export function Navbar() {
 
   return (
     <header className="bg-white shadow">
       <div className="container mx-auto flex items-center justify-between py-4 px-6 md:flex-row md:items-center">
-        <div className="text-lg font-bold">LOGO</div>
+        <div className="text-lg font-bold">
+          <Link href="/">LOGO</Link>
+        </div>
         <nav className="flex items-center space-x-6 md:space-x-6">
           <div className="relative group hidden md:block">
             <button className="text-gray-700">For Sale</button>

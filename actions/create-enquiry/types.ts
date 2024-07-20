@@ -7,7 +7,7 @@ export const EnquiryDataSchema = z.object({
   dialingCode: z.string(),
   phoneNumber: z.string(),
   message: z.string(),
-  listingId: z.number(),
+  listingId: z.string(),
   ownedBy: z.string(),
 });
 
