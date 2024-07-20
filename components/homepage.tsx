@@ -6,6 +6,7 @@
 import { Button } from "@/components/ui/button"
 import { Navbar } from "./navbar"
 import { PropertyCard } from "./property-card"
+import { PropertySlider } from "./property-slider"
 
 export function Homepage() {
   return (
@@ -21,34 +22,13 @@ export function Homepage() {
 
       <section className="container mx-auto py-12 px-4 md:px-6">
         <h2 className="text-2xl font-bold mb-6">Properties For Sale</h2>
-        <div className="relative">
-          <div className="flex overflow-x-auto snap-x snap-mandatory space-x-6 -mx-4 md:-mx-6 pb-4">
-            {[1, 3, 4, 5, 6].map((i) => (
-              <PropertyCard />
-            ))}
-          </div>
-          <div className="flex justify-center mt-4 space-x-2">
-            <div className="w-2 h-2 bg-gray-400 rounded-full" />
-            <div className="w-2 h-2 bg-gray-400 rounded-full" />
-            <div className="w-2 h-2 bg-red-500 rounded-full" />
-          </div>
-        </div>
+        <PropertySlider />
       </section>
       <section className="bg-white container mx-auto py-12 px-4 md:px-6">
         <h2 className="text-2xl font-bold mb-6">Properties For Rent</h2>
-        <div className="relative">
-          <div className="flex overflow-x-auto snap-x snap-mandatory space-x-6 -mx-4 md:-mx-6 pb-4">
-            {[1, 3, 4, 5, 6].map((i) => (
-              <PropertyCard />
-            ))}
-          </div>
-          <div className="flex justify-center mt-4 space-x-2">
-            <div className="w-2 h-2 bg-gray-400 rounded-full" />
-            <div className="w-2 h-2 bg-gray-400 rounded-full" />
-            <div className="w-2 h-2 bg-red-500 rounded-full" />
-          </div>
-        </div>
+        <PropertySlider />
       </section>
+      
       <section className="bg-gray-100 py-12 md:py-16 px-4 md:px-6">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="bg-white rounded shadow p-6 text-center">
@@ -58,7 +38,9 @@ export function Homepage() {
               Find your place with an immersive photo experience and the most listings, including things you won't find
               anywhere else.
             </p>
-            <button className="mt-4 bg-red-500 text-white px-4 py-2 rounded">Browse Properties For Sale</button>
+            <button className="mt-4 w-full bg-white text-red-500 px-4 py-2 rounded border border-red-500">
+              Browse Properties For Sale
+            </button>
           </div>
           <div className="bg-white rounded shadow p-6 text-center">
             <img src="/placeholder.svg" alt="Sell a Property" className="mx-auto mb-4" />
@@ -78,7 +60,9 @@ export function Homepage() {
               Find your place with an immersive photo experience and the most listings, including things you won't find
               anywhere else.
             </p>
-            <button className="mt-4 bg-red-500 text-white px-4 py-2 rounded">Find Rentals</button>
+            <button className="mt-4 w-full bg-white text-red-500 px-4 py-2 rounded border border-red-500">
+              Find Rentals
+            </button>
           </div>
         </div>
       </section>

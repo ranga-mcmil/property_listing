@@ -1,4 +1,4 @@
-import { HeartIcon, ShareIcon, StarIcon } from "lucide-react";
+import { Instagram, Phone, AtSign } from "lucide-react";
 import { Button } from "./ui/button";
 
 export function PropertyCard() {
@@ -16,13 +16,13 @@ export function PropertyCard() {
             <div className="mt-4 border-t pt-4 flex items-center justify-between">
                 <div className="flex gap-2">
                 <Button variant="outline">
-                    <HeartIcon className="w-4 h-4" />
+                    <Instagram className="w-4 h-4" />
                 </Button>
                 <Button variant="outline">
-                    <ShareIcon className="w-4 h-4" />
+                    <Phone className="w-4 h-4" />
                 </Button>
                 <Button variant="outline">
-                    <StarIcon className="w-4 h-4" />
+                    <AtSign className="w-4 h-4" />
                 </Button>
                 </div>
                 <Button className="bg-red-500 text-white px-4 py-2 rounded" variant="outline">Details</Button>
