@@ -94,7 +94,7 @@ export function PropertyDetail({
           </div>
           <aside className="w-full lg:w-1/3">
             <div className="bg-white shadow p-6">
-              <img src="/placeholder.svg" alt="Housing Logo" className="w-24 h-24 mx-auto" />
+              <img src="/logo.png" alt="Housing Logo" className="w-24 h-24 mx-auto" />
               {/* <Image /> */}
               {/* <Image
                   src='/placeholder.svg'

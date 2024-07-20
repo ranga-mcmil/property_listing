@@ -17,7 +17,7 @@ export function Homepage({
   return (
       <>
         <section className="bg-gray-200 py-12 md:py-16">
-        <div className="flex  justify-center align-middle">
+        <div className="flex-inline">
           <div className="container mx-auto px-4 md:px-6 justify-center">
             <div className="inline-flex  bg-white p-1 flex-col items-center justify-center space-y-4 md:space-x-4 md:space-y-0 md:flex-row">
               <Link href='/listings?propertyType=for-sale'>

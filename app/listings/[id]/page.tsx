@@ -7,7 +7,6 @@ export default async function ListingDetail({
   const id = params.id
 
   const property = await getPropertyById(id)
-  console.log(property)
 
   return (
     <PropertyDetail property={property.data}/>
