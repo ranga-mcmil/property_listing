@@ -1,10 +1,10 @@
-import { PropertyApiResponse } from "@/lib/types";
+import { Property, PropertyApiResponse } from "@/lib/types";
 import { Navbar } from "./navbar"
 import { PropertySlider } from "./property-slider"
 
 type HomepageProps = {
-  propertiesToRent: PropertyApiResponse;
-  propertiesForSale: PropertyApiResponse;
+  propertiesToRent: Property[];
+  propertiesForSale: Property[];
 }
 
 

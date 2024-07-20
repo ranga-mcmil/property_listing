@@ -1,5 +1,5 @@
 import { getProperties } from "@/actions/get-properties";
-import { ListView } from "@/components/list-view";
+import { Listings } from "@/components/listings";
 import { PropertyFilterType } from "@/lib/types";
 
 export default async function ListingsPage({
@@ -14,10 +14,10 @@ export default async function ListingsPage({
     const propertyType = searchParams.propertyType;
     const view = searchParams.view;
 
-    const data = propertyType ? await getProperties(propertyType) : await getProperties('latest')
+    const properties = propertyType ? await getProperties(propertyType) : await getProperties('to-rent')
 
 
     return (
-        <ListView />
+        <Listings properties={properties}/>
     );
 }

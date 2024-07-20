@@ -2,8 +2,9 @@ import { getProperties } from "@/actions/get-properties";
 import { Homepage } from "@/components/homepage";
 
 export default async function Home() {
-  const propertiesToRent = await getProperties('to-rent')
-  const propertiesForSale = await getProperties('for-sale')
+  const latestProperties = await getProperties('latest')
+  const propertiesToRent = latestProperties.data.latestPropertiesToRent
+  const propertiesForSale = latestProperties.data.latestPropertiesForSale
 
   return (
     <Homepage propertiesToRent={propertiesToRent} propertiesForSale={propertiesForSale} />
@@ -11,7 +12,6 @@ export default async function Home() {
 }
 
 
-import React from 'react';
 
 
     

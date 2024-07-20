@@ -1,17 +1,19 @@
-import { PropertyApiResponse } from "@/lib/types";
+import { Property, PropertyApiResponse } from "@/lib/types";
 import { PropertyCard } from "./property-card";
 
 type PropertySliderProps = {
-  properties: PropertyApiResponse;
+  properties: Property[];
 };
 
 export function PropertySlider({ properties }: PropertySliderProps) {
 
+    console.log(properties)
 
     return (
         <div className="relative">
         <div className="flex overflow-x-auto snap-x snap-mandatory -mx-4 md:-mx-6 pb-4">
-            {properties.data.map((property) => (
+            
+            {properties.map((property) => (
                 <PropertyCard property={property}/>
             ))}
         </div>
