@@ -1,4 +1,5 @@
 import { getProperties } from "@/actions/get-properties";
+import { ListView } from "@/components/list-view";
 import { PropertyFilterType } from "@/lib/types";
 
 export default async function ListingsPage({
@@ -17,6 +18,6 @@ export default async function ListingsPage({
 
 
     return (
-        <>dfd</>
+        <ListView />
     );
 }
