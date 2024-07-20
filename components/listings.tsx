@@ -3,15 +3,15 @@ import { Filter } from "./filter"
 import { PropertyCardListView } from "./property-card-listview"
 import { PropertyApiResponse } from "@/lib/types"
 import { FilterViewButtons } from "./filter-view"
-
+import { PropertyCardGrid } from "./property-card-grid"
 
 type ListingsProps = {
-  properties: PropertyApiResponse;
+  properties: PropertyApiResponse
+  view: string
 }
 
-
 export function Listings({
-  properties
+  properties, view
 }: ListingsProps ) {
 
   return (
@@ -27,12 +27,28 @@ export function Listings({
             <FilterViewButtons />
           </div>
           
-          <div className="space-y-4">
-            {properties.data.map((property) => (
-              
-              <PropertyCardListView property={property}/>
-            ))}
-          </div>
+
+          { 
+            view === 'grid' ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {properties.data.map((property) => (
+                  <PropertyCardGrid property={property}/>
+                ))}
+
+              </div>
+            ) : (
+              <div className="space-y-4">
+                {properties.data.map((property) => (
+                  
+                  <PropertyCardListView property={property}/>
+                ))}
+                
+              </div>
+            )
+          }
+          
+          
+          
         </section>
       </main>
     </div>

@@ -18,6 +18,6 @@ export default async function ListingsPage({
 
 
     return (
-        <Listings properties={properties}/>
+        <Listings properties={properties} view={view}/>
     );
 }

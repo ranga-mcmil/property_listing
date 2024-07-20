@@ -23,10 +23,10 @@ export function FilterViewButtons() {
 
   return (
     <div className="flex space-x-2">
-      <Button variant="outline" className="p-2" onClick={() => handleClick('id')}>
+      <Button variant="outline" className="p-2" onClick={() => handleClick('list')}>
         <List className="w-5 h-5" />
       </Button>
-      <Button variant="outline" className="p-2" onClick={() => handleClick('fdssfs')}>
+      <Button variant="outline" className="p-2" onClick={() => handleClick('grid')}>
         <LayoutGrid className="w-5 h-5" />
       </Button>
     </div>
