@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils'
 import './globals.css'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
+import { Toaster } from "sonner";
 
 const fontHeading = Inter({
   subsets: ['latin'],
@@ -35,6 +36,7 @@ export default function RootLayout({
 
       <div className="min-h-screen bg-gray-100">
         <Navbar />
+        <Toaster />
         {children}
 
         <Footer />

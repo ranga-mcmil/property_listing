@@ -5,9 +5,8 @@
 */
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Property, PropertyApiResponse } from "@/lib/types";
+import { Property } from "@/lib/types";
+import { EnquiryForm } from "./enquiry-form";
 
 type PropertyDetailProps = {
   property: Property;
@@ -18,8 +17,6 @@ export function PropertyDetail({
   property
 }:  PropertyDetailProps
 ) {
-
-  console.log(property)
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -95,14 +92,7 @@ export function PropertyDetail({
                   Call Agent
                 </Button>
               </div>
-              <form className="mt-4 space-y-4">
-                <Input placeholder="First Name" />
-                <Input placeholder="Last Name" />
-                <Input type="email" placeholder="Email" />
-                <Input type="tel" placeholder="Phone Number" />
-                <Textarea placeholder="Message" className="min-h-[100px]" />
-                <Button className="w-full">Send Message</Button>
-              </form>
+              <EnquiryForm listingId={property.id} />
               <p className="text-xs text-gray-600 text-center mt-4">
                 By sending enquiry messages, you agree to Sold.co.nz's{" "}
                 <Link href="#" className="text-blue-600" prefetch={false}>
