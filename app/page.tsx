@@ -2,10 +2,11 @@ import { getProperties } from "@/actions/get-properties";
 import { Homepage } from "@/components/homepage";
 
 export default async function Home() {
-  const data = await getProperties('latest')
+  const propertiesToRent = await getProperties('to-rent')
+  const propertiesForSale = await getProperties('for-sale')
 
   return (
-    <Homepage />
+    <Homepage propertiesToRent={propertiesToRent} propertiesForSale={propertiesForSale} />
   );
 }
 

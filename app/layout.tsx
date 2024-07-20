@@ -3,6 +3,8 @@
 import { Inter } from 'next/font/google'
 import { cn } from '@/lib/utils'
 import './globals.css'
+import { Navbar } from '@/components/navbar'
+import { Footer } from '@/components/footer'
 
 const fontHeading = Inter({
   subsets: ['latin'],
@@ -30,7 +32,13 @@ export default function RootLayout({
           fontBody.variable
         )}
       >
+
+      <div className="min-h-screen bg-gray-100">
+        <Navbar />
         {children}
+
+        <Footer />
+      </div>
       </body>
     </html>
   )

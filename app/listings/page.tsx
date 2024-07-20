@@ -13,14 +13,7 @@ export default async function ListingsPage({
     const propertyType = searchParams.propertyType;
     const view = searchParams.view;
 
-    console.log(propertyType)
-    console.log(view)
-
-
-
-    const data = await getProperties(propertyType)
-
-    console.log(data)
+    const data = propertyType ? await getProperties(propertyType) : await getProperties('latest')
 
 
     return (
