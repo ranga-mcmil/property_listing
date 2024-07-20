@@ -3,6 +3,7 @@ import { Navbar } from "./navbar"
 import { PropertySlider } from "./property-slider"
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select"
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 type HomepageProps = {
   propertiesToRent: Property[];
@@ -16,12 +17,18 @@ export function Homepage({
   return (
       <>
         <section className="bg-gray-200 py-12 md:py-16">
-          <div className="container mx-auto px-4 md:px-6">
+        <div className="flex  justify-center align-middle">
+          <div className="container mx-auto px-4 md:px-6 justify-center">
             <div className="inline-flex  bg-white p-1 flex-col items-center justify-center space-y-4 md:space-x-4 md:space-y-0 md:flex-row">
-              <Button size="extrasm" className="bg-red-500 text-white px-4 py-2 rounded w-full md:w-auto">For Sale</Button>
-              <Button size="extrasm" className="bg-gray-300 text-gray-700 px-4 py-2 rounded w-full md:w-auto">To Rent</Button>
+              <Link href='/listings?propertyType=for-sale'>
+                <Button size="extrasm" className="bg-red-500 text-white px-4 py-2 rounded w-full md:w-auto">For Sale</Button>
+              </Link>
+              <Link href='/listings?propertyType=to-rent'>
+                <Button size="extrasm" className="bg-gray-300 text-gray-700 px-4 py-2 rounded w-full md:w-auto">To Rent</Button>
+
+              </Link>
             </div>
-            <div className="mt-6 flex flex-col items-center justify-center space-y-4 md:space-x-4 md:space-y-0 md:flex-row">
+            <div className="mt-6 flex flex-col items-center  space-y-4 md:space-x-4 md:space-y-0 md:flex-row">
               
               <Select >
                 <SelectTrigger id="property-type" className="border border-gray-300 px-4 py-2 rounded w-full md:w-48">
@@ -40,6 +47,7 @@ export function Homepage({
               />
               <button className="bg-red-500 text-white px-4 py-2 rounded w-full md:w-auto">SEARCH</button>
             </div>
+          </div>
           </div>
         </section>
 
