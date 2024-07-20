@@ -32,7 +32,7 @@ export function Listings({
             view === 'grid' ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {properties.data.map((property) => (
-                  <PropertyCardGrid property={property}/>
+                  <PropertyCardGrid key={property.id} property={property}/>
                 ))}
 
               </div>
@@ -40,7 +40,7 @@ export function Listings({
               <div className="space-y-4">
                 {properties.data.map((property) => (
                   
-                  <PropertyCardListView property={property}/>
+                  <PropertyCardListView key={property.id} property={property}/>
                 ))}
                 
               </div>

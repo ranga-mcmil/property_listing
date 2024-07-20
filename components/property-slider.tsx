@@ -14,7 +14,7 @@ export function PropertySlider({ properties }: PropertySliderProps) {
         <div className="flex overflow-x-auto snap-x snap-mandatory -mx-4 md:-mx-6 pb-4">
             
             {properties.map((property) => (
-                <PropertyCard property={property}/>
+                <PropertyCard key={property.id} property={property}/>
             ))}
         </div>
         <div className="flex justify-center mt-4 space-x-2">

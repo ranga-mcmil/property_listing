@@ -1,6 +1,7 @@
 import { Property, PropertyApiResponse } from "@/lib/types";
 import { Navbar } from "./navbar"
 import { PropertySlider } from "./property-slider"
+import Image from "next/image";
 
 type HomepageProps = {
   propertiesToRent: Property[];
@@ -33,9 +34,11 @@ export function Homepage({
           <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white rounded shadow p-6 text-center">
               <img src="/placeholder.svg" alt="Buy a Property" className="mx-auto mb-4" />
+              {/* <Image src="/placeholder.svg" alt="Buy a Property" className="mx-auto mb-4" /> */}
+              
               <h3 className="text-lg font-semibold">Buy a Property</h3>
               <p className="text-gray-600">
-                Find your place with an immersive photo experience and the most listings, including things you won't find
+                Find your place with an immersive photo experience and the most listings, including things you wont find
                 anywhere else.
               </p>
               <button className="mt-4 w-full bg-white text-red-500 px-4 py-2 rounded border border-red-500">
@@ -43,10 +46,10 @@ export function Homepage({
               </button>
             </div>
             <div className="bg-white rounded shadow p-6 text-center">
-              <img src="/placeholder.svg" alt="Sell a Property" className="mx-auto mb-4" />
+              <img src='/placeholder.svg' alt='Sell a Property' className='mx-auto mb-4' />
               <h3 className="text-lg font-semibold">Sell a Property</h3>
               <p className="text-gray-600">
-                Find your place with an immersive photo experience and the most listings, including things you won't find
+                Find your place with an immersive photo experience and the most listings, including things you wont find
                 anywhere else.
               </p>
               <button className="mt-4 w-full text-red-500 px-4 py-2 bg-white  rounded border border-red-500">
@@ -54,10 +57,10 @@ export function Homepage({
               </button>
             </div>
             <div className="bg-white rounded shadow p-6 text-center">
-              <img src="/placeholder.svg" alt="Rent a Property" className="mx-auto mb-4" />
+              <img src='/placeholder.svg' alt='Rent a Property' className='mx-auto mb-4' />
               <h3 className="text-lg font-semibold">Rent a Property</h3>
               <p className="text-gray-600">
-                Find your place with an immersive photo experience and the most listings, including things you won't find
+                Find your place with an immersive photo experience and the most listings, including things you wont find
                 anywhere else.
               </p>
               <button className="mt-4 w-full bg-white text-red-500 px-4 py-2 rounded border border-red-500">

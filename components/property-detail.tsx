@@ -7,6 +7,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Property } from "@/lib/types";
 import { EnquiryForm } from "./enquiry-form";
+import Image from 'next/image'
 
 type PropertyDetailProps = {
   property: Property;
@@ -29,10 +30,21 @@ export function PropertyDetail({
             <div className="text-2xl font-bold mt-4">${property.price}/mo</div>
             <div className="mt-4">
               <img src={property.images[0].filePath} alt="Home Image" className="w-full h-auto" />
+              {/* <Image
+                  src={property.images[0].filePath}
+                  alt="Picture "
+                  className="w-full h-auto"
+                /> */}
             </div>
             <div className="mt-4 flex space-x-2">
               {property.images.map(image => (
-                <img src={image.filePath} alt="Thumbnail" className="w-24 h-24" />
+                <img key={image.filePath} src={image.filePath} alt="Thumbnail" className="w-24 h-24" />
+                // <Image
+                //   src={image.filePath}
+                //   key={image.filePath}
+                //   alt="Picture "
+                //   className="w-24 h-24"
+                // />
               ))}
               
             </div>
@@ -83,6 +95,12 @@ export function PropertyDetail({
           <aside className="w-full lg:w-1/3">
             <div className="bg-white shadow p-6">
               <img src="/placeholder.svg" alt="Housing Logo" className="w-24 h-24 mx-auto" />
+              {/* <Image /> */}
+              {/* <Image
+                  src='/placeholder.svg'
+                  alt="Housing Logo "
+                  className="w-24 h-24 mx-auto"
+                /> */}
               <h3 className="text-xl font-bold text-center mt-4">Housing Investment</h3>
               <div className="mt-4 flex flex-col space-y-2">
                 <Button variant="outline" className="w-full">
@@ -94,7 +112,7 @@ export function PropertyDetail({
               </div>
               <EnquiryForm listingId={property.id} />
               <p className="text-xs text-gray-600 text-center mt-4">
-                By sending enquiry messages, you agree to Sold.co.nz's{" "}
+                By sending enquiry messages, you agree to Sold.co.nzs{" "}
                 <Link href="#" className="text-blue-600" prefetch={false}>
                   Terms & Conditions
                 </Link>
