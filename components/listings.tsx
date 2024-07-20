@@ -23,7 +23,7 @@ export function Listings({
         <section className="w-3/4 space-y-6">
           <div className="flex items-center justify-between p-4 bg-white rounded-md shadow">
             <span className="text-gray-600">Sort by:</span>
-            <span className="text-gray-600">10 Search Results</span>
+            <span className="text-gray-600">{properties.data.length} Search Results</span>
             <FilterViewButtons />
           </div>
           
