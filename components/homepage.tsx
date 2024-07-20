@@ -1,7 +1,8 @@
 import { Property, PropertyApiResponse } from "@/lib/types";
 import { Navbar } from "./navbar"
 import { PropertySlider } from "./property-slider"
-import Image from "next/image";
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select"
+import { Button } from "./ui/button";
 
 type HomepageProps = {
   propertiesToRent: Property[];
@@ -15,9 +16,30 @@ export function Homepage({
   return (
       <>
         <section className="bg-gray-200 py-12 md:py-16">
-          <div className="bg-white mx-auto w-full md:w-1/2 flex flex-col items-center justify-center space-y-4 md:space-x-4 md:space-y-0 md:flex-row">
-            <button className="bg-red-500 text-white px-4 py-2 rounded w-full md:w-auto">For Sale</button>
-            <button className="bg-gray-300 text-gray-700 px-4 py-2 rounded w-full md:w-auto">To Rent</button>
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="inline-flex  bg-white p-1 flex-col items-center justify-center space-y-4 md:space-x-4 md:space-y-0 md:flex-row">
+              <Button size="extrasm" className="bg-red-500 text-white px-4 py-2 rounded w-full md:w-auto">For Sale</Button>
+              <Button size="extrasm" className="bg-gray-300 text-gray-700 px-4 py-2 rounded w-full md:w-auto">To Rent</Button>
+            </div>
+            <div className="mt-6 flex flex-col items-center justify-center space-y-4 md:space-x-4 md:space-y-0 md:flex-row">
+              
+              <Select >
+                <SelectTrigger id="property-type" className="border border-gray-300 px-4 py-2 rounded w-full md:w-48">
+                  <SelectValue placeholder="Property Types" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="house">House</SelectItem>
+                  <SelectItem value="apartment">Apartment</SelectItem>
+                  <SelectItem value="condo">Condo</SelectItem>
+                </SelectContent>
+              </Select>
+              <input
+                type="text"
+                placeholder="Suburb, City, Province, Country"
+                className="border border-gray-300 px-4 py-2 rounded w-full md:w-96"
+              />
+              <button className="bg-red-500 text-white px-4 py-2 rounded w-full md:w-auto">SEARCH</button>
+            </div>
           </div>
         </section>
 
