@@ -33,7 +33,7 @@ export function Homepage({
         <section className="bg-gray-100 py-12 md:py-16 px-4 md:px-6">
           <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white rounded shadow p-6 text-center">
-              <img src="/placeholder.svg" alt="Buy a Property" className="mx-auto mb-4" />
+              <img src="/1-01.svg" alt="Buy a Property" className="mx-auto mb-4" />
               {/* <Image src="/placeholder.svg" alt="Buy a Property" className="mx-auto mb-4" /> */}
               
               <h3 className="text-lg font-semibold">Buy a Property</h3>
@@ -46,7 +46,7 @@ export function Homepage({
               </button>
             </div>
             <div className="bg-white rounded shadow p-6 text-center">
-              <img src='/placeholder.svg' alt='Sell a Property' className='mx-auto mb-4' />
+              <img src='/2-02.svg' alt='Sell a Property' className='mx-auto mb-4' />
               <h3 className="text-lg font-semibold">Sell a Property</h3>
               <p className="text-gray-600">
                 Find your place with an immersive photo experience and the most listings, including things you wont find
@@ -57,7 +57,7 @@ export function Homepage({
               </button>
             </div>
             <div className="bg-white rounded shadow p-6 text-center">
-              <img src='/placeholder.svg' alt='Rent a Property' className='mx-auto mb-4' />
+              <img src='/3-03.svg' alt='Rent a Property' className='mx-auto mb-4' />
               <h3 className="text-lg font-semibold">Rent a Property</h3>
               <p className="text-gray-600">
                 Find your place with an immersive photo experience and the most listings, including things you wont find

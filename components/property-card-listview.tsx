@@ -19,14 +19,15 @@ export function PropertyCardListView({
 
         <Card className="flex p-4 space-x-4 bg-white rounded-md shadow">
             <div className="relative w-1/3">
+                <div className="flex items-center space-x-2 absolute top-0 left-0">
+                    <Badge variant="default">Featured</Badge>
+                    <Badge variant="redish" >{property.status}</Badge>
+                </div>
                 <img src={property.images[0].filePath} alt="Property" className="object-cover w-full h-full rounded-md" />
                 <div className="absolute bottom-0 left-0 p-2 text-white bg-black bg-opacity-50">$ {property.price}</div>
             </div>
             <div className="flex-1 space-y-2">
-                <div className="flex items-center space-x-2">
-                    <Badge variant="default">Featured</Badge>
-                    <Badge variant="secondary">Rent</Badge>
-                </div>
+                
                 <h2 className="text-lg font-semibold">{property.type}</h2>
                 <p className="text-sm text-gray-600">{property.title}</p>
                 <p className="text-sm text-gray-600">{property.address}</p>
@@ -36,19 +37,19 @@ export function PropertyCardListView({
                 </p>
                 <div className="mt-4 border-t pt-4 flex items-center justify-between">
                     <div className="flex gap-2">
-                        <Button variant="outline">
-                            <Instagram className="w-4 h-4" />
+                        <Button variant="redish" >
+                            <Instagram  className="w-4 h-4" />
                         </Button>
-                        <Button variant="outline">
-                            <Phone className="w-4 h-4" />
+                        <Button variant="redish" >
+                            <Phone  className="w-4 h-4" />
                         </Button>
-                        <Button variant="outline">
-                            <AtSign className="w-4 h-4" />
+                        <Button variant="redish" >
+                            <AtSign  className="w-4 h-4" />
                         </Button>
                     </div>
                     <Link
                         href={`/listings/${property.id}`}
-                        className="bg-red-500 text-white px-4 py-2 rounded bg-white rounded border border-red-500"
+                        className="text-red-500 px-4 py-2 rounded bg-white border border-red-500"
                     >
                         Details
                     </Link>

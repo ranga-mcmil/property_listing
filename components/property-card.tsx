@@ -26,22 +26,23 @@ export function PropertyCard({ property }: PropertyCardProps) {
                     </p>
                     <div className="mt-4 border-t pt-4 flex items-center justify-between">
                         <div className="flex gap-2">
-                            <Button variant="outline">
+                            <Button variant="redish">
                                 <Instagram className="w-4 h-4" />
                             </Button>
-                            <Button variant="outline">
+                            <Button variant="redish">
                                 <Phone className="w-4 h-4" />
                             </Button>
-                            <Button variant="outline">
-                                <AtSign className="w-4 h-4" />
+                            <Button variant="redish">
+                                <AtSign className="w-4 h-4 " />
                             </Button>
                         </div>
                         <Link
                             href={`/listings/${property.id}`}
-                            className="bg-red-500 text-white px-4 py-2 rounded bg-white rounded border border-red-500"
+                            className="text-red-500  px-4 py-2 rounded bg-white border border-red-500"
                         >
                             Details
                         </Link>
+                        
                     </div>
                 </div>
             </div>

@@ -103,17 +103,18 @@ export function PropertyDetail({
                 /> */}
               <h3 className="text-xl font-bold text-center mt-4">Housing Investment</h3>
               <div className="mt-4 flex flex-col space-y-2">
-                <Button variant="outline" className="w-full">
+                <Button variant="redish" className="w-full">
                   Whatsapp Agent
                 </Button>
-                <Button variant="outline" className="w-full">
+                
+                <Button variant="redish" className="w-full">
                   Call Agent
                 </Button>
               </div>
               <EnquiryForm listingId={property.id} />
               <p className="text-xs text-gray-600 text-center mt-4">
                 By sending enquiry messages, you agree to Sold.co.nzs{" "}
-                <Link href="#" className="text-blue-600" prefetch={false}>
+                <Link href="#" className="text-red-500" prefetch={false}>
                   Terms & Conditions
                 </Link>
               </p>

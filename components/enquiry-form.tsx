@@ -38,7 +38,7 @@ export function EnquiryForm({
       <input hidden name="listingId" value={listingId} />
 
 
-      <Button className="w-full">Send Message</Button>
+      <Button className="w-full bg-red-500 text-white">Send Message</Button>
     </form>
 
 )
